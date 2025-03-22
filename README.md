@@ -1,4 +1,4 @@
-Collaborative Project with team: Anas Alanqar ⋅ Emily Oh ⋅ Ethan Hong ⋅ Suna Lee ⋅ Juan Aldunate
+Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, Juan Aldunate
 
 ### TL;DR
 
