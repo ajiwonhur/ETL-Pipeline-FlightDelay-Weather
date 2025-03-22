@@ -1,6 +1,4 @@
-# team2
-
-**Anas Alanqar ⋅ Emily Oh ⋅ Ethan Hong ⋅ Suna Lee ⋅ Jiwon Hur ⋅ Juan Aldunate**
+Collaborative Project with team: Anas Alanqar ⋅ Emily Oh ⋅ Ethan Hong ⋅ Suna Lee ⋅ Juan Aldunate
 
 ### TL;DR
 
