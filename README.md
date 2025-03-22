@@ -1,6 +1,6 @@
 Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, Juan Aldunate
 
-### Summary
+## Summary
 
 * This project creates a data pipline from data collection and ETL processing, to build a real-time dashboard (on data refresh), to provide information on US flight delays and weather.
 * Bash script orchestrates whole process from Python layer (for data collection and backfilling), Spark layer (preprocessing and joining), and Snowflake layer (for OLAP data loading & Quering.)
@@ -12,8 +12,7 @@ Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, J
 
 - **Overall Dashboard**: Provides a high-level summary of the dataset, showing key trends and top metrics.  
 - **Interactive Dashboard**: Allows users to explore specific aspects of flight disruptions using filters and dynamic visualizations.    
-## How to Use the Dashboard  
-Tableau Dashboard: https://public.tableau.com/shared/WSDF6YP8T
+- **Tableau Dashboard**: https://public.tableau.com/shared/WSDF6YP8T
 
 ![image](https://github.com/user-attachments/assets/c20c8763-a3ca-4a7e-9d9a-b44b4058c1d5)
 ![Image](https://github.com/user-attachments/assets/a042b87d-e589-4c39-8c58-cdecc381d08f)
@@ -24,8 +23,6 @@ Tableau Dashboard: https://public.tableau.com/shared/WSDF6YP8T
 - Cloudy and rainy conditions are major causes of both delays & cancellations.  
 - Wind speed fluctuations align with delay frequency, while temperature has minimal impact.  
 
-# About Pipeline
-
 ## Pipeline Overview
 
 ![Image](https://github.com/user-attachments/assets/ecba70a8-e7f7-41fe-9a77-69952b765d22)
@@ -34,29 +31,6 @@ Tableau Dashboard: https://public.tableau.com/shared/WSDF6YP8T
 * Each of the process are encapsulated in functions, to make pipeline more atomic. 
 * On any error triggered during the pipeline that makes pipeline to break, it automatically run **`rollback()`** function to remove all the created files and directories.  
   * ***(The repository includes a `rollback.sh` script for manual rollbacks when needed. Additionally, the pipeline automatically triggers a rollback upon detecting an error, requiring no manual intervention.)***
-
-## How to run the pipeline
-
-~~~shell
-pipenv --python 
-#pipenv shell
-bash run_pipeline.sh
-~~~
-
-* Will run entire pipeline, from collecting, processing data (Python & Spark), loading data to DB (Snowflake) and querying for Tableau.
-* On error, it will rollback all changes made from the pipeline automaticallty. 
-
-## Environment setting
-
-* On GCP environment, usage of virtual environment is required. Please enter virtual environment before running the pipeline. 
-
-~~~bash
-pipenv --python 
-#pipenv shell
-bash run_pipeline.sh
-~~~
-
-* run_pipeline.sh includes required python package installation. 
 
 ## Dependencies
 
