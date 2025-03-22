@@ -1,44 +1,19 @@
 Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, Juan Aldunate
 
-### TL;DR
+### Summary
 
 * This project creates a data pipline from data collection and ETL processing, to build a real-time dashboard (on data refresh), to provide information on US flight delays and weather.
 * Bash script orchestrates whole process from Python layer (for data collection and backfilling), Spark layer (preprocessing and joining), and Snowflake layer (for OLAP data loading & Quering.)
 * Tableau connects to Snoflake DB, and **live connetor** enables Tableau to refresh dashboard without breaking any pipeline, when source data is updated (keeping data fields / schema.)
 
-# Dashboard Overview
+## Dashboard 
 
 **Tableau** has been utilized as the main tool to analyze flight disruptions and their correlation with weather conditions. The dashboard is designed with **two levels of visualization**:  
 
 - **Overall Dashboard**: Provides a high-level summary of the dataset, showing key trends and top metrics.  
-- **Interactive Dashboard**: Allows users to explore specific aspects of flight disruptions using filters and dynamic visualizations.  
-
-## Key Features  
-
-### **Static Visualizations**  
-- Aggregated Top 5 metrics  
-- Time-trend analysis for delays & cancellations  
-- **Exploratory Data Analysis (EDA)** insights  
-
-### **Visualization Design & Best Practices**  
-- Geospatial mapping, categorical breakdowns, and trend analysis
-- Colorblind-friendly palette for accessibility  
-- Arial font for cross-platform readability
-
-### **Interactive Visualizations**
-- Filterable metrics by airline, airport, weather condition, and time
-- Drillable state map with dynamic chart updates and airport-level insights
-- Weather impact map showing dominant conditions per airport and time period
-
-### **User Experience Design & Functionality**
-- Quick filters and parameters for intuitive navigation
-- Action filters for seamless cross-chart interaction
-- Dynamic metric selection and date-level control (daily, weekly, yearly)
-  
+- **Interactive Dashboard**: Allows users to explore specific aspects of flight disruptions using filters and dynamic visualizations.    
 ## How to Use the Dashboard  
 Tableau Dashboard: https://public.tableau.com/shared/WSDF6YP8T
-- Navigate to the **Overall Dashboard** for a quick summary.  
-- Use the **Interactive Dashboard** to filter by airline, airport, weather condition, or time range.  
 
 ![image](https://github.com/user-attachments/assets/c20c8763-a3ca-4a7e-9d9a-b44b4058c1d5)
 ![Image](https://github.com/user-attachments/assets/a042b87d-e589-4c39-8c58-cdecc381d08f)
