@@ -12,7 +12,7 @@ Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, J
 
 - **Overall Dashboard**: Provides a high-level summary of the dataset, showing key trends and top metrics.  
 - **Interactive Dashboard**: Allows users to explore specific aspects of flight disruptions using filters and dynamic visualizations.    
-- **Tableau Dashboard**: https://public.tableau.com/shared/WSDF6YP8T
+- **Tableau Dashboard**: https://public.tableau.com/views/TeamProjectFlightDelayandWeatherDashboard/Story1
 
 ![image](https://github.com/user-attachments/assets/c20c8763-a3ca-4a7e-9d9a-b44b4058c1d5)
 ![Image](https://github.com/user-attachments/assets/a042b87d-e589-4c39-8c58-cdecc381d08f)
