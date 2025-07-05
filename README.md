@@ -2,18 +2,14 @@ Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, J
 
 ## Summary
 
-* This project creates a data pipline from data collection and ETL processing, to build a real-time dashboard (on data refresh), to provide information on US flight delays and weather.
-* Bash script orchestrates whole process from Python layer (for data collection and backfilling), Spark layer (preprocessing and joining), and Snowflake layer (for OLAP data loading & query).
-* Tableau connects to Snoflake DB, and live connetor enables Tableau to refresh dashboard without breaking any pipeline, when source data is updated (keeping data fields / schema.)
+* In this project, I collaborated with the team to build an end-to-end ETL pipeline that serves data collected using API to data warehouse on Snowflake to serve real-time dashboard built on Tableau, providing information on US flight delays and weather.
+* Bash script orchestrates whole process from Python layer (for data collection and backfilling), Spark layer (preprocessing and joining), to Snowflake layer (for OLAP data loading & query).
+* Tableau connects to Snowflake, and live connetor enables Tableau to refresh dashboard real-time without breaking any pipeline, when source data is updated.
 
 ## Dashboard 
 
-**Tableau** has been utilized as the main tool to analyze flight disruptions and their correlation with weather conditions. The dashboard is designed with **two levels of visualization**:  
-
-- **Overall Dashboard**: Provides a high-level summary of the dataset, showing key trends and top metrics.  
-- **Interactive Dashboard**: Allows users to explore specific aspects of flight disruptions using filters and dynamic visualizations.    
+The Tableau dashboard provides insights about flight delays and weather, allowing users to explore flight disruptions using filters and dynamic visualizations.    
 - **Tableau Dashboard**: [Link](https://public.tableau.com/views/TeamProjectFlightDelayandWeatherDashboard/Story1)
-
 <img src="dashboard.png" width="400" height="300">
 
 ## Key Insights from the Data  
