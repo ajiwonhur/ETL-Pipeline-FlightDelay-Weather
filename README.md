@@ -7,9 +7,8 @@ Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, J
 * Tableau connects to Snowflake, and live connetor enables Tableau to refresh dashboard real-time without breaking any pipeline, when source data is updated.
 
 ## Dashboard 
-
+**Tableau Dashboard**: [Link](https://public.tableau.com/views/TeamProjectFlightDelayandWeatherDashboard/Story1)
 The Tableau dashboard provides insights about flight delays and weather, allowing users to explore flight disruptions using filters and dynamic visualizations.    
-- **Tableau Dashboard**: [Link](https://public.tableau.com/views/TeamProjectFlightDelayandWeatherDashboard/Story1)
 <img src="dashboard.png" width="400" height="300">
 
 ## Key Insights from the Data  
