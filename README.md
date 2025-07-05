@@ -3,7 +3,7 @@ Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, J
 ## Summary
 
 * This project creates a data pipline from data collection and ETL processing, to build a real-time dashboard (on data refresh), to provide information on US flight delays and weather.
-* Bash script orchestrates whole process from Python layer (for data collection and backfilling), Spark layer (preprocessing and joining), and Snowflake layer (for OLAP data loading & Quering.)
+* Bash script orchestrates whole process from Python layer (for data collection and backfilling), Spark layer (preprocessing and joining), and Snowflake layer (for OLAP data loading & query).
 * Tableau connects to Snoflake DB, and live connetor enables Tableau to refresh dashboard without breaking any pipeline, when source data is updated (keeping data fields / schema.)
 
 ## Dashboard 
@@ -14,8 +14,7 @@ Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, J
 - **Interactive Dashboard**: Allows users to explore specific aspects of flight disruptions using filters and dynamic visualizations.    
 - **Tableau Dashboard**: [Link](https://public.tableau.com/views/TeamProjectFlightDelayandWeatherDashboard/Story1)
 
-![image](https://github.com/user-attachments/assets/c20c8763-a3ca-4a7e-9d9a-b44b4058c1d5)
-![Image](https://github.com/user-attachments/assets/a042b87d-e589-4c39-8c58-cdecc381d08f)
+<img src="dashboard.png" width="400" height="300">
 
 ## Key Insights from the Data  
 - August has the highest flight delays, mainly due to seasonal thunderstorms.  
@@ -25,7 +24,7 @@ Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, J
 
 ## Pipeline Overview
 
-![Image](https://github.com/user-attachments/assets/ecba70a8-e7f7-41fe-9a77-69952b765d22)
+<img src="pipeline.png" width="400" height="300">
 
 * run_pipeloine.sh will run entire pipeline. 
 * Each of the process are encapsulated in functions, to make pipeline more atomic. 
