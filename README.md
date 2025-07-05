@@ -8,6 +8,7 @@ Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, J
 
 ## Dashboard 
 **Tableau Dashboard**: [Link](https://public.tableau.com/views/TeamProjectFlightDelayandWeatherDashboard/Story1)
+
 The Tableau dashboard provides insights about flight delays and weather, allowing users to explore flight disruptions using filters and dynamic visualizations.    
 <img src="dashboard.png" width="400" height="300">
 
