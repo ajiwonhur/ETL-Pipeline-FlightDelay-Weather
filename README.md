@@ -1,31 +1,31 @@
 Collaborative Project with team: Anas Alanqar, Emily Oh, Ethan Hong, Suna Lee, Juan Aldunate
 
-## Summary
+## End-to-End Data Pipeline Project
+In this project, I collaborated with the team to build an end-to-end ETL pipeline that serves data collected using API to data warehouse on Snowflake to serve real-time dashboard built on Tableau, providing information on US flight delays and weather.
 
-* In this project, I collaborated with the team to build an end-to-end ETL pipeline that serves data collected using API to data warehouse on Snowflake to serve real-time dashboard built on Tableau, providing information on US flight delays and weather.
-* Bash script orchestrates whole process from Python layer (for data collection and backfilling), Spark layer (preprocessing and joining), to Snowflake layer (for OLAP data loading & query).
-* Tableau connects to Snowflake, and live connetor enables Tableau to refresh dashboard real-time without breaking any pipeline, when source data is updated.
 
-## Dashboard 
-**Tableau Dashboard**: [Link](https://public.tableau.com/views/TeamProjectFlightDelayandWeatherDashboard/Story1)
+## Overview
 
-The Tableau dashboard provides insights about flight delays and weather, allowing users to explore flight disruptions using filters and dynamic visualizations.    
-<img src="dashboard.png" width="400" height="300">
+Bash script **run_pipeline.sh** orchestrates whole process from Python layer (for data collection and backfilling), Spark layer (preprocessing and joining), to Snowflake layer (for OLAP data loading & query).
 
-## Key Insights from the Data  
-- August has the highest flight delays, mainly due to seasonal thunderstorms.  
-- New Jersey reports the highest delay ratio, while Maine leads in cancellations.  
-- Cloudy and rainy conditions are major causes of both delays & cancellations.  
-- Wind speed fluctuations align with delay frequency, while temperature has minimal impact.  
+<img src="pipeline.png" width="600" height="400">
 
-## Pipeline Overview
-
-<img src="pipeline.png" width="400" height="300">
-
-* run_pipeloine.sh will run entire pipeline. 
 * Each of the process are encapsulated in functions, to make pipeline more atomic. 
 * On any error triggered during the pipeline that makes pipeline to break, it automatically run **`rollback()`** function to remove all the created files and directories.  
   * ***(The repository includes a `rollback.sh` script for manual rollbacks when needed. Additionally, the pipeline automatically triggers a rollback upon detecting an error, requiring no manual intervention.)***
+  
+#### Snowflake  
+* SQL query executed by Bash loads data into Snowflake, creates table and views for aggregated measures, which is used on the Tableau layer. 
+
+<p float="left">
+  <img src="snowflake-1.png" width="400" height="300" />
+  <img src="snowflake-2.png" width="400" height="300" />
+</p>
+
+#### Tableau 
+* Tableau connects to Snowflake, and live connetor enables Tableau to refresh dashboard real-time without breaking any pipeline, when source data is updated. 
+[Link to Tableau Dashboard](https://public.tableau.com/views/TeamProjectFlightDelayandWeatherDashboard/Story1)
+<img src="dashboard.png" width="400" height="300">
 
 ## Dependencies
 
